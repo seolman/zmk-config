@@ -29,10 +29,10 @@
 
         nav_num {
             bindings = <
-             &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-             &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SPACE
-&kp LA(TAB)  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-                                   &trans     &trans     &trans       &trans     &trans     &trans
+        &kp ESC    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+        &kp TAB    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
+&trans  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp ENTER
+                              &trans     &trans     &trans       &trans     &trans     &trans
             >;
         };
 
