@@ -29,19 +29,19 @@
 
         nav_num {
             bindings = <
-             &kp N1  &kp N2  &kp N3  &kp N4  &kp NUMBER_5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
-             &none   &none   &none   &none   &none           &none   &none   &none   &none   &none
-&kp LA(TAB)  &none   &none   &none   &none   &none           &none   &none   &none   &none   &none   &none
-                             &trans  &trans  &trans          &trans  &trans  &trans
+             &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+             &kp        &kp        &kp        &kp        &kp          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp
+&kp LA(TAB)  &kp        &kp        &kp        &kp        &kp          &kp        &kp        &kp        &kp        &kp        &kp
+                                   &trans     &trans     &trans       &trans     &trans     &trans
             >;
         };
 
         sym_func {
             bindings = <
-           &kp ESC        &kp LEFT_BRACE        &kp RIGHT_BRACE        &none             &none             &kp F1   &kp F2           &kp F3   &kp F4   &kp F5
-           &kp TAB        &kp LBKT              &kp RBKT               &kp ENTER         &kp BSLH          &kp F6   &kp F7           &kp F8   &kp F9   &kp F10
-&kp GRAVE  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp UNDERSCORE    &kp F11  &kp F12          &kp F13  &kp F14  &kp F15  &kp F16
-                                                &trans                 &trans            &trans            &none    &kp RIGHT_SHIFT  &none
+           &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
+           &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp LPAR  &kp RPAR  &kp SPACE
+&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp LBRC   &kp LBKT  &kp RBKT  &kp RBRC   &kp SPACE
+                                 &trans     &trans     &trans       &trans     &trans     &trans
             >;
         };
 
