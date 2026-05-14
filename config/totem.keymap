@@ -15,35 +15,44 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <16 17>;
+            timeout-ms = <100>;
+            layers = <0>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-           &kp Q  &kp W  &kp E  &kp R      &kp T       &kp Y      &kp U           &kp I      &kp O    &kp P
-           &kp A  &kp S  &kp D  &kp F      &kp G       &kp H      &kp J           &kp K      &kp L    &kp SEMI
-&kp LCTRL  &kp Z  &kp X  &kp C  &kp V      &kp B       &kp N      &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp APOS
-                         &mo 2  &kp LMETA  &kp LALT    &kp SPACE  &kp LANGUAGE_1  &mo 1
+         &kp Q  &kp W  &kp E  &kp R      &kp T      &kp Y    &kp U     &kp I      &kp O    &kp P
+         &kp A  &kp S  &kp D  &kp F      &kp G      &kp H    &kp J     &kp K      &kp L    &kp SEMI
+&kp ESC  &kp Z  &kp X  &kp C  &kp V      &kp B      &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp APOS
+                       &mo 1  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &mo 2
             >;
         };
 
         nav {
             bindings = <
-        &kp ESC  &kp F9  &kp F10  &kp F11  &kp F12    &none     &none     &none   &none      &kp BSPC
-        &kp TAB  &kp F5  &kp F6   &kp F7   &kp F8     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
-&trans  &none    &kp F1  &kp F2   &kp F3   &kp F4     &none     &none     &none   &none      &none     &none
-                         &trans   &trans   &trans     &trans    &trans    &trans
+       &kp EXCL    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR
+       &kp LSHIFT  &kp LMETA  &kp LALT   &kp LCTRL  &kp SPACE    &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &kp SPACE
+&none  &none       &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &none      &none     &none     &none      &none      &none
+                              &trans     &trans     &trans       &trans     &trans    &trans
             >;
         };
 
         num_sym {
             bindings = <
-           &kp N1    &kp N2    &kp N3    &kp N4    &kp N5       &kp N6     &kp N7     &kp N8    &kp N9     &kp N0
-           &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR  &kp MINUS  &kp PLUS
-&kp GRAVE  &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &kp PIPE     &kp BSLH   &kp LPAR   &kp RPAR  &kp DOT    &kp FSLH  &kp EQUAL
-                               &trans    &trans    &trans       &kp UNDER  &kp TILDE  &trans
+           &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+           &kp LSHFT  &kp LGUI   &kp LALT   &kp LCTRL  &kp SPACE    &kp SPACE  &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT
+&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+                                 &trans     &trans     &trans       &trans     &trans     &trans
             >;
         };
 
