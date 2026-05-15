@@ -15,21 +15,30 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <16 17>;
+            timeout-ms = <75>;
+            layers = <0>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-       &kp Q  &kp W  &kp E      &kp R        &kp T        &kp Y      &kp U        &kp I      &kp O    &kp P
-       &kp A  &kp S  &kp D      &kp F        &kp G        &kp H      &kp J        &kp K      &kp L    &kp SQT
-&none  &kp Z  &kp X  &kp C      &kp V        &kp B        &kp N      &kp M        &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &kp SPACE  &lt 1 SPACE  &kp SPACE    &kp SPACE  &lt 2 SPACE  &kp SPACE
+            &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P
+            &kp A  &kp S  &kp D      &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SQT
+&kp LSHIFT  &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                          &kp LMETA  &mo 1  &kp LCTRL    &kp SPACE  &mo 2  &kp LALT
             >;
         };
 
-        nav {
+        sym {
             bindings = <
         &kp SPACE   &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp BSPC
         &kp LSHIFT  &kp LMETA  &kp LALT   &kp LCTRL  &kp SPACE    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp RET
@@ -38,10 +47,10 @@
             >;
         };
 
-        num_sym {
+        num_nav {
             bindings = <
         &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-        &kp LSHFT  &kp LGUI   &kp LALT   &kp LCTRL  &kp SPACE    &kp SPACE  &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT
+        &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SPACE
 &trans  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &trans
                               &trans     &trans     &trans       &trans     &trans     &trans
             >;
