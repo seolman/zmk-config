@@ -22,28 +22,28 @@
 
         base {
             bindings = <
-       &kp Q  &kp W  &kp E      &kp R    &kp T        &kp Y       &kp U       &kp I           &kp O    &kp P
-       &kp A  &kp S  &kp D      &kp F    &kp G        &kp H       &kp J       &kp K           &kp L    &kp SQT
-&none  &kp Z  &kp X  &kp C      &kp V    &kp B        &kp N       &kp M       &kp COMMA       &kp DOT  &kp FSLH  &none
-                     &kp LMETA  &kp TAB  &kp SPACE    &kp LSHIFT  &kp LSHIFT  &kp LANGUAGE_1
+       &kp Q  &kp W  &kp E      &kp R        &kp T        &kp Y      &kp U        &kp I      &kp O    &kp P
+       &kp A  &kp S  &kp D      &kp F        &kp G        &kp H      &kp J        &kp K      &kp L    &kp SQT
+&none  &kp Z  &kp X  &kp C      &kp V        &kp B        &kp N      &kp M        &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &kp SPACE  &lt 1 SPACE  &kp SPACE    &kp SPACE  &lt 2 SPACE  &kp SPACE
             >;
         };
 
         nav {
             bindings = <
-       &kp EXCL    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR
-       &kp LSHIFT  &kp LMETA  &kp LALT   &kp LCTRL  &kp SPACE    &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &kp SPACE
-&none  &none       &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &none      &none     &none     &none      &none      &none
-                              &trans     &trans     &trans       &trans     &trans    &trans
+        &kp SPACE   &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp BSPC
+        &kp LSHIFT  &kp LMETA  &kp LALT   &kp LCTRL  &kp SPACE    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp RET
+&trans  &kp SPACE   &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &trans
+                               &trans     &trans     &trans       &trans     &trans     &trans
             >;
         };
 
         num_sym {
             bindings = <
-           &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-           &kp LSHFT  &kp LGUI   &kp LALT   &kp LCTRL  &kp SPACE    &kp SPACE  &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-                                 &trans     &trans     &trans       &trans     &trans     &trans
+        &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+        &kp LSHFT  &kp LGUI   &kp LALT   &kp LCTRL  &kp SPACE    &kp SPACE  &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT
+&trans  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &trans
+                              &trans     &trans     &trans       &trans     &trans     &trans
             >;
         };
 
@@ -61,8 +61,8 @@
         compatible = "zmk,conditional-layers";
 
         device {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <3 2>;
+            then-layer = <4>;
         };
     };
 };
