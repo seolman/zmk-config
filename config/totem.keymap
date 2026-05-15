@@ -15,26 +15,17 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            bindings = <&kp ESC>;
-            key-positions = <16 17>;
-            timeout-ms = <100>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-         &kp Q  &kp W  &kp E  &kp R      &kp T      &kp Y    &kp U     &kp I      &kp O    &kp P
-         &kp A  &kp S  &kp D  &kp F      &kp G      &kp H    &kp J     &kp K      &kp L    &kp SEMI
-&kp ESC  &kp Z  &kp X  &kp C  &kp V      &kp B      &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp APOS
-                       &mo 1  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &mo 2
+       &kp Q  &kp W  &kp E      &kp R    &kp T        &kp Y       &kp U       &kp I           &kp O    &kp P
+       &kp A  &kp S  &kp D      &kp F    &kp G        &kp H       &kp J       &kp K           &kp L    &kp SQT
+&none  &kp Z  &kp X  &kp C      &kp V    &kp B        &kp N       &kp M       &kp COMMA       &kp DOT  &kp FSLH  &none
+                     &kp LMETA  &kp TAB  &kp SPACE    &kp LSHIFT  &kp LSHIFT  &kp LANGUAGE_1
             >;
         };
 
