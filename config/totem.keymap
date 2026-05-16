@@ -26,24 +26,53 @@
         };
     };
 
+    behaviors {
+        exqm: exqm {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXQM";
+            bindings = <&kp EXCL>, <&kp QMARK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        cose: cose {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COSE";
+            bindings = <&kp COMMA>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        doco: doco {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOCO";
+            bindings = <&kp DOT>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-       &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O      &kp P
-       &kp A  &kp S  &kp D  &kp F  &kp G        &kp H      &kp J  &kp K      &kp L      &kp SPACE
-&none  &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N      &kp M  &kp SPACE  &kp SPACE  &kp SPACE  &none
-                     &none  &mo 1  &kp SPACE    &kp LSHFT  &mo 2  &none
+       &kp Q  &kp W  &kp E  &kp R  &kp T         &kp Y      &kp U  &kp I  &kp O  &kp P
+       &kp A  &kp S  &kp D  &kp F  &kp G         &kp H      &kp J  &kp K  &kp L  &kp SQT
+&none  &kp Z  &kp X  &kp C  &kp V  &kp B         &kp N      &kp M  &cose  &doco  &exqm    &none
+                     &none  &mo 1  &kp LSHIFT    &kp SPACE  &mo 2  &none
             >;
         };
 
-        num {
+        num_sym {
             bindings = <
-        &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7    &kp N8    &kp N9     &kp N0
-        &sk LSHFT  &sk LMETA  &sk LALT   &sk LCTRL  &kp SPACE    &kp CARET  &kp FSLH  &kp STAR  &kp MINUS  &kp PLUS
-&trans  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp PRCNT  &kp LT    &kp GT    &kp DOT    &kp EQUAL  &trans
-                              &trans     &trans     &trans       &trans     &trans    &trans
+        &kp N1      &kp N2        &kp N3    &kp N4        &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+        &kp LS(LT)  &kp LS(LPAR)  &kp LBKT  &kp LS(LBRC)  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+&trans  &kp LS(GT)  &kp LS(RPAR)  &kp RBKT  &kp LS(RBRC)  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &trans
+                                  &trans    &trans        &trans       &trans     &trans     &trans
             >;
         };
 
