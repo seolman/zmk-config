@@ -69,10 +69,10 @@
 
         num_sym {
             bindings = <
-        &kp N1      &kp N2        &kp N3    &kp N4        &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-        &kp LS(LT)  &kp LS(LPAR)  &kp LBKT  &kp LS(LBRC)  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-&trans  &kp LS(GT)  &kp LS(RPAR)  &kp RBKT  &kp LS(RBRC)  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &trans
-                                  &trans    &trans        &trans       &trans     &trans     &trans
+        &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8    &kp N9     &kp N0
+        &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp CARET  &kp AMPS   &kp STAR  &kp MINUS  &kp PLUS
+&trans  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp PRCNT  &kp EQUAL  &kp LT    &kp GT     &kp FSLH  &trans
+                              &trans     &trans     &trans       &kp UNDER  &trans     &trans
             >;
         };
 
